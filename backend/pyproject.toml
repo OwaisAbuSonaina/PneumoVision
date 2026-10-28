@@ -7,7 +7,11 @@ authors = [
     { name = "Owais Abu Sonaina", email = "owaisabusonaina@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "numpy>=2.5.4",
+    "opencv-python>=5.0.0.93",
+    "tensorflow>=2.21.0",
+]
 
 [project.scripts]
 backend = "backend:main"

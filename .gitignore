@@ -1,2 +1,27 @@
 # Models
 models/
+
+# Python Virtual Environments
+.venv/
+env/
+venv/
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing & Linting Tools
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local Environment Variables
+.env
+.env.local
+
+# Docker / Compose overrides & logs
+docker-compose.override.yml
+*.log

@@ -7,7 +7,10 @@ authors = [
     { name = "Owais Abu Sonaina", email = "owaisabusonaina@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "gradio>=6.31.0",
+    "requests>=2.34.2",
+]
 
 [project.scripts]
 frontend = "frontend:main"

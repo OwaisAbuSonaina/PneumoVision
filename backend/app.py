@@ -12,6 +12,14 @@ MODEL_DIR = Path(os.getenv("MODEL_DIR", "./models"))
 MODEL_FILENAME = "best_model.keras"
 MODEL_PATH = MODEL_DIR / MODEL_FILENAME
 
+if not MODEL_PATH.is_file():
+    MODEL_DIR.mkdir(parents=True, exist_ok=True)
+    hf_hub_download(
+        repo_id="OwaisAbuSonaina/PneumoVision",
+        filename=MODEL_FILENAME,
+        local_dir=str(MODEL_DIR)
+    )
+
 inference_engine = None
 
 @asynccontextmanager

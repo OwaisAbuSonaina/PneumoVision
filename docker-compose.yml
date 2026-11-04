@@ -1,0 +1,18 @@
+services:
+  backend:
+    container_name: PneumoVision_backend
+    build: ./backend
+    ports:
+      - "8000:8000"
+    restart: always
+
+  frontend:
+    container_name: PneumoVision_frontend
+    build: ./frontend
+    ports:
+      - "7860:7860"
+    environment:
+      - BACKEND_HOST=backend
+    depends_on:
+      - backend
+    restart: always

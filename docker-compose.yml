@@ -9,10 +9,6 @@ services:
       - model_cache:/app/models
     env_file:
       - .env
-    stdin_open: true
-    tty: true
-    environment:
-      - PYTHONUNBUFFERED=1
 
   frontend:
     container_name: PneumoVision_frontend

@@ -15,10 +15,6 @@ __pycache__/
 .coverage
 htmlcov/
 
-# Local Environment Variables
-.env
-.env.local
-
 # Docker / Compose overrides & logs
 docker-compose.override.yml
 *.log

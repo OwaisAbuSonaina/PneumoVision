@@ -58,20 +58,6 @@ The following results are from the recorded evaluation run in `train_model/noteb
 | Normal | 0.86 | 0.81 | 0.83 |
 | Pneumonia | 0.89 | 0.92 | 0.91 |
 
-### Recorded training loss
-
-The chart below shows the loss values logged during the four recorded training epochs.
-
-```mermaid
-xychart-beta
-    title "Training and validation loss"
-    x-axis "Epoch" [1, 2, 3, 4]
-    y-axis "Binary cross-entropy" 0 --> 0.4
-    line [0.3506, 0.1826, 0.1221, 0.1432]
-    line [0.1621, 0.1929, 0.1937, 0.2453]
-```
-
-The first line is training loss; the second is validation loss.
 
 ## Project structure
 
@@ -88,7 +74,3 @@ The first line is training loss; the second is validation loss.
 ## Responsible use
 
 PneumoVision is an experimental research and educational project. Predictions can be wrong and must not be used as a standalone medical diagnosis or as a substitute for review by a qualified healthcare professional.
-
-## License
-
-No license has been specified for this repository yet.

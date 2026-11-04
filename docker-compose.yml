@@ -5,6 +5,14 @@ services:
     ports:
       - "8000:8000"
     restart: always
+    volumes:
+      - model_cache:/app/models
+    env_file:
+      - .env
+    stdin_open: true
+    tty: true
+    environment:
+      - PYTHONUNBUFFERED=1
 
   frontend:
     container_name: PneumoVision_frontend
@@ -16,3 +24,6 @@ services:
     depends_on:
       - backend
     restart: always
+
+volumes:
+  model_cache:

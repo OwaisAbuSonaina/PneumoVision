@@ -1,13 +1,12 @@
 # frontend.py
 
-# frontend.py
-
 import os
 import random
 import gradio as gr
 import requests
 
-API_URL = "http://127.0.0.1:8000/predict"
+BACKEND_HOST = os.getenv("BACKEND_HOST", "backend")
+API_URL = f"http://{BACKEND_HOST}:8000/predict"
 
 def get_risk_tier(probability: float):
     if probability >= 0.80:
@@ -123,7 +122,7 @@ theme = gr.themes.Soft(
     neutral_hue="slate"
 )
 
-with gr.Blocks(css=custom_css, title="PneumoVision") as demo:
+with gr.Blocks(title="PneumoVision") as demo:
     with gr.Column(elem_classes="center-container"):
         
         gr.HTML("""
@@ -174,4 +173,4 @@ with gr.Blocks(css=custom_css, title="PneumoVision") as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch(theme=theme, inbrowser=True)
+    demo.launch(theme=theme, css=custom_css, inbrowser=True)
